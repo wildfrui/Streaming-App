@@ -1,0 +1,56 @@
+.list__container {
+}
+.list__streams {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.list__stream {
+  margin-bottom: 10px;
+  background-color: #fff;
+  padding: 10px 0px;
+  min-width: 98%;
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stream__title {
+  font-size: 24px;
+  text-decoration: underline;
+}
+
+.stream__options {
+  margin-top: 10px;
+}
+.stream__edit {
+  color: #fff;
+  text-decoration: none;
+  padding: 2px 10px;
+  border-radius: 10%;
+  background-color: #6441a5;
+  cursor: pointer;
+}
+.stream__delete {
+  margin-left: 10px;
+  color: #fff;
+  text-decoration: none;
+  padding: 2px 10px;
+  border-radius: 10%;
+  background-color: #d10707;
+  cursor: pointer;
+}
+
+.streams__create {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+
+.container_centered {
+  text-align: center;
+}
