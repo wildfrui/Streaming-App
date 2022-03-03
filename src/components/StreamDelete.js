@@ -3,6 +3,7 @@ import Modal from "./Modal";
 import { Link } from "react-router-dom";
 import { getStream, deleteStream } from "../actions";
 import { connect } from "react-redux";
+import "./StreamDelete.css";
 
 class Delete extends React.Component {
   componentDidMount() {
@@ -16,8 +17,12 @@ class Delete extends React.Component {
   renderOptions = () => {
     return (
       <React.Fragment>
-        <button onClick={() => this.onClickHandle()}>Delete</button>
-        <Link to="/">Cancel</Link>
+        <button className="delete__submit" onClick={() => this.onClickHandle()}>
+          Delete
+        </button>
+        <Link className="delete__cancel" to="/">
+          Cancel
+        </Link>
       </React.Fragment>
     );
   };

@@ -38,7 +38,7 @@ class GoogleAuth extends React.Component {
   renderStatus() {
     switch (this.props.isSignedIn) {
       case null:
-        return <div>Something Went Wrong</div>;
+        return <div></div>;
       case true:
         return (
           <button

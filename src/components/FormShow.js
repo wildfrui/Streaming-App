@@ -1,19 +1,20 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
+import "./FormShow.css";
 
 class FormShow extends React.Component {
   renderError = ({ error }) => {
     if (error) {
-      return <div>{error}</div>;
+      return <div className="form__error">{error}</div>;
     }
   };
 
   renderInput = ({ input, label, meta }) => {
     console.log(meta);
     return (
-      <div>
-        <label>{label}</label>
-        <input {...input} />
+      <div className="form__field">
+        <label className="form__label">{label}</label>
+        <input className="form__input" {...input} />
         {this.renderError(meta)}
       </div>
     );
@@ -27,7 +28,11 @@ class FormShow extends React.Component {
     console.log(this.props.initialValues);
     return (
       <div>
-        <form action="" onSubmit={this.props.handleSubmit(this.onFormSubmit)}>
+        <form
+          className="form__container"
+          action=""
+          onSubmit={this.props.handleSubmit(this.onFormSubmit)}
+        >
           <Field
             name="title"
             component={this.renderInput}
@@ -38,7 +43,7 @@ class FormShow extends React.Component {
             component={this.renderInput}
             label={"Write a description"}
           ></Field>
-          <button>Submit</button>
+          <button className="form__submit">Submit</button>
         </form>
       </div>
     );
